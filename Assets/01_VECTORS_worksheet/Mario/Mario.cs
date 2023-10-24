@@ -19,8 +19,8 @@ public class Mario : MonoBehaviour
 
     void FixedUpdate()
     {
-        gravityDir = new Vector3(-gravityStrength, -force, 0f);
-        moveDir = new Vector3(-force, gravityStrength, 0f);
+        gravityDir = planet.transform.position - transform.position;
+        moveDir = new Vector3(gravityDir.y, -gravityDir.x, 0f);
         moveDir = moveDir.normalized * -1f;
 
         rb.AddForce(moveDir * force);
@@ -28,10 +28,12 @@ public class Mario : MonoBehaviour
         gravityNorm = gravityDir.normalized;
         rb.AddForce(gravityNorm * gravityStrength);
 
-        float angle = Vector3.SignedAngle(gravityNorm,
-            moveDir, Vector3.forward);
+        float angle = Vector3.SignedAngle(moveDir,
+            transform.position, Vector3.forward);
 
-        rb.MoveRotation(Quaternion.Euler(angle, 0, 0));
+        Debug.Log(angle);
+
+        rb.MoveRotation(Quaternion.Euler(0, 0, -angle));
 
         DebugExtension.DebugArrow(rb.position, gravityNorm, Color.red);
 

@@ -479,8 +479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 25543976}
-  force: 10
-  gravityStrength: 4
+  force: 5
+  gravityStrength: 5
 --- !u!50 &1602136179
 Rigidbody2D:
   serializedVersion: 4
