@@ -161,7 +161,7 @@ public class HMatrix2D
         return false;
     }
 
-    public override bool Equals(object obj)
+   /* public override bool Equals(object obj)
     {
         // your code here
     }
@@ -180,6 +180,7 @@ public class HMatrix2D
     {
         return // your code here
     }
+   */
 
     public void setIdentity()
     {
