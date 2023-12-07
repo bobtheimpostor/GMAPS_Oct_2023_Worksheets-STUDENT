@@ -20,10 +20,10 @@ public class PoolCue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var startLinePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // Start line drawing
+            var startLinePos = Camera.main.ScreenToWorldPoint(ball.Position.ToUnityVector2()); // Start line drawing
             if (ball != null && ball.IsCollidingWith(Input.mousePosition.x, Input.mousePosition.y))
             {
-                drawnLine = lineFactory.GetLine(Input.mousePosition, ball.Position.ToUnityVector2(), 1f, Color.white);
+                drawnLine = lineFactory.GetLine(ball.Position.ToUnityVector2(), Input.mousePosition, 1f, Color.white);
                 drawnLine.EnableDrawing(true);
             }
         }

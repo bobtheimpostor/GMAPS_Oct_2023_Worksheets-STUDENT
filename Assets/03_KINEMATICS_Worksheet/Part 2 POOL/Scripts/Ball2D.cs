@@ -21,15 +21,15 @@ public class Ball2D : MonoBehaviour
         Vector2 local_sprite_size = sprite_size / sprite.pixelsPerUnit;
         Radius = local_sprite_size.x / 2f;
 
-        HVector2D a = new HVector2D(8f, 5f);
-        HVector2D b = new HVector2D(1f, 3f);
+        /*HVector2D a = new HVector2D(8f, 3f);
+        HVector2D b = new HVector2D(5f, 3f);
         float distance = Util.FindDistance(a, b);
-        Debug.Log(distance);  
+        Debug.Log(distance);  */ //test code for finddistance
     }
 
     public bool IsCollidingWith(float x, float y)
     {
-        float distance = new HVector2D(x - Position.x, y - Position.y).Magnitude();
+        float distance = Util.FindDistance(new HVector2D(x, y), new HVector2D(transform.position.x, transform.position.y)); // find distance btwn ball and mouse position
         Debug.Log(distance);
         Debug.Log(Radius);
         return distance <= Radius;

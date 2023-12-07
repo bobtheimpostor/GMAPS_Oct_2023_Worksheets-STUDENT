@@ -763,9 +763,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balls:
   - {fileID: 1796459725}
-  - {fileID: 1259905667}
-  - {fileID: 1815526462}
   - {fileID: 1178544395}
+  - {fileID: 1815526462}
+  - {fileID: 1259905667}
 --- !u!4 &1178544394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3478974678008601555, guid: b38b23e3ea2d97f4ebe01c5351b667f5, type: 3}
@@ -1195,6 +1195,10 @@ PrefabInstance:
     - target: {fileID: 4363845954280630641, guid: b38b23e3ea2d97f4ebe01c5351b667f5, type: 3}
       propertyPath: m_Name
       value: cueBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799243048347897992, guid: b38b23e3ea2d97f4ebe01c5351b667f5, type: 3}
+      propertyPath: offsetY
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 5653773946213343852, guid: b38b23e3ea2d97f4ebe01c5351b667f5, type: 3}
       propertyPath: m_Color.b
